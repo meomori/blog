@@ -7,11 +7,11 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @post.author %>
+  <%= @post.user.username %>
 </p>
 
 <p>
-  <strong>Blog entry:</strong>
+  <strong>Blog Entry:</strong>
   <%= @post.blog_entry %>
 </p>
 
@@ -22,7 +22,7 @@
 
 	<% @post.comments.each do |comment| %>
 		<p>
-			<%= comment.author %> said...<br />
+			<%= comment.user.username %> said...<br />
 			<%= comment.comment_entry %>
 		</p>
 	<%end%>
